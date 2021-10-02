@@ -29,6 +29,9 @@ import EditPatient from "./components/pages/EditPatient";
 import managePatient from "./components/PatientServices/managePatient";
 import ChargeCalculate from "./components/pages/ChargeCalculate";
 import ViewCharge from "./components/pages/viewCharge";
+import SearchPatient from './components/pages/SearchPatient';
+import SearchPatientCharge from './components/pages/SearchPatientCharge';
+import patientReport from './components/pages/patientReport';
 
 //Ishani
 import AddChannel from './components/pages/AddChannel';
@@ -111,6 +114,9 @@ function App() {
               <Route path="/editPatient/:id" component={EditPatient} />
               <Route path="/chargeCalculate" component={ChargeCalculate} />
               <Route path='/viewCharge' component={ViewCharge} />
+              <Route path='/SearchPatient' component={SearchPatient} />
+              <Route path='/SearchPatientCharge' component={SearchPatientCharge} />
+              <Route path='/patientReport' component={patientReport} />
 
               <Route path="/addChannel" component={AddChannel} />
               <Route path="/editChannel/:id" component={EditChannel} />

@@ -4,6 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 
 const Charge = props => (
     <tr>
+        <td>{props.charge.dateofcharge}</td>
         <td>{props.charge.name}</td>
         <td>{props.charge.roomward}</td>
         <td>{props.charge.wardChargePerDay}</td>
@@ -58,12 +59,14 @@ export default class ViewCharge extends Component {
                 <br></br><br></br>
                 <table className="table" className="container">
                     <tr>
+                        <th>Date</th>
                         <th>Patient Name</th>
                         <th>Room/Ward</th>
                         <th>Ward Charge Per Day</th>
                         <th>Room Charge Per Day</th>
                         <th>No Of Days Stayed</th>
                         <th>Total Charge</th>
+                        <th>Action</th>
                     </tr>
                     <tbody>
                         {this.chargeDetailsList()}

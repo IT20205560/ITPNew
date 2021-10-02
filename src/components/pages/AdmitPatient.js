@@ -36,7 +36,6 @@ export default class AdmitPatient extends Component {
       roomward: '',
       roomwardno: '',
       dateofadmit: new Date(),
-
     }
   }
 
@@ -171,6 +170,7 @@ export default class AdmitPatient extends Component {
               className="form-control"
               value={this.state.nic}
               maxLength="10"
+              minLength="10"
               placeholder="Patient NIC"
               onChange={this.onChangeNIC}
             />
@@ -184,6 +184,7 @@ export default class AdmitPatient extends Component {
               value={this.state.mobileno}
               pattern="[0-9]*"
               maxLength="10"
+              minLength="10"
               placeholder="Enter Mobile No"
               onChange={this.onChangeMobileNo}
             />

@@ -11,6 +11,8 @@ router.route('/').get((req, res) => {
 
 //create
 router.route('/add').post((req, res) => {
+    const dateofcharge = Date.parse(req.body.dateofcharge);
+
     const name = req.body.name;
     const roomward = req.body.roomward;
     const wardChargePerDay = req.body.wardChargePerDay;
@@ -19,7 +21,7 @@ router.route('/add').post((req, res) => {
     const totalCharge = ((wardChargePerDay * noOfDays) + (roomChargePerDay * noOfDays));
 
     const newCharge = new Charge({
-
+        dateofcharge,
         name,
         roomward,
         wardChargePerDay,
@@ -52,7 +54,7 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
     Charge.findById(req.params.id)
         .then(charge => {
-        
+            patient.dateofcharge = Date.parse(req.body.dateofcharge);
             charge.name = req.body.name;
             charge.roomward = req.body.roomward;
             charge.wardChargePerDay = req.body.wardChargePerDay;
